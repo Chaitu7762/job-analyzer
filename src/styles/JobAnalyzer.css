@@ -1,0 +1,249 @@
+/* =========================
+   Job Analyzer Page Styles
+   ========================= */
+
+.analyzer-page {
+    min-height: 100vh;
+    background: #f7fafc;
+    padding: 40px 20px;
+}
+
+.analyzer-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* ---------- Header ---------- */
+
+.analyzer-header {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.analyzer-title {
+    margin: 0 0 8px;
+    font-size: 32px;
+    font-weight: 700;
+    color: #1a202c;
+}
+
+.analyzer-subtitle {
+    margin: 0;
+    font-size: 15px;
+    color: #718096;
+}
+
+/* ---------- Card ---------- */
+
+.analyzer-card {
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    padding: 32px;
+}
+
+/* ---------- Form ---------- */
+
+.analyzer-form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.analyzer-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.analyzer-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #2d3748;
+}
+
+.analyzer-file-input {
+    padding: 10px;
+    font-size: 14px;
+    border: 2px dashed #cbd5e0;
+    border-radius: 10px;
+    background: #f7fafc;
+    cursor: pointer;
+    transition: border-color 0.2s, background 0.2s;
+    color: #4a5568;
+}
+
+.analyzer-file-input:hover {
+    border-color: #667eea;
+    background: #edf2f7;
+}
+
+.analyzer-textarea {
+    padding: 12px 16px;
+    font-size: 15px;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    color: #1a202c;
+    font-family: inherit;
+    resize: vertical;
+    min-height: 200px;
+}
+
+.analyzer-textarea:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
+}
+
+/* ---------- Error ---------- */
+
+.analyzer-error {
+    padding: 10px 14px;
+    background: #fed7d7;
+    color: #c53030;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* ---------- Button ---------- */
+
+.analyzer-button {
+    padding: 14px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffffff;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.1s, box-shadow 0.2s;
+    box-shadow: 0 4px 14px rgba(102, 126, 234, 0.4);
+}
+
+.analyzer-button:hover:not(:disabled) {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.5);
+}
+
+.analyzer-button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+/* ---------- Result Card ---------- */
+
+.result-card {
+    margin-top: 32px;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    padding: 32px;
+    border-top: 4px solid #667eea;
+}
+
+.result-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.result-title {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 700;
+    color: #1a202c;
+}
+
+.result-badge {
+    padding: 6px 14px;
+    background: #edf2f7;
+    color: #4a5568;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.result-section {
+    margin-bottom: 24px;
+}
+
+.result-section:last-child {
+    margin-bottom: 0;
+}
+
+.result-section-title {
+    margin: 0 0 12px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #2d3748;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.result-summary {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #4a5568;
+}
+
+.result-meta {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.result-meta-item {
+    background: #f7fafc;
+    border-radius: 10px;
+    padding: 16px;
+}
+
+.result-meta-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: #a0aec0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 6px;
+}
+
+.result-meta-value {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a202c;
+}
+
+/* ---------- Skills ---------- */
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.skill-chip {
+    padding: 8px 14px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #ffffff;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+@media (max-width: 640px) {
+    .result-meta {
+        grid-template-columns: 1fr;
+    }
+
+    .analyzer-card,
+    .result-card {
+        padding: 24px;
+    }
+}
