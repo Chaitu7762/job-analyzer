@@ -1,0 +1,31 @@
+spring:
+  application:
+    name: jobanalyzer
+  datasource:
+    url: jdbc:postgresql://localhost:5432/jobanalyzer
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+  ai:
+    ollama:
+      base-url: http://localhost:11434
+      embedding:
+        options:
+          model: nomic-embed-text
+    vectorstore:
+      pgvector:
+        initialize-schema: true
+        index-type: HNSW
+        distance-type: COSINE_DISTANCE
+        dimensions: 768  # MUST match nomic-embed-text output [citation:3]
+        # table-name: vector_store (default, can omit)
+
+jwt:
+  secret: MyVeryLongSecretKeyForJwtSigning2026SpringBootProject123
+  expiration: 3600000
